@@ -1,0 +1,13 @@
+extends layout
+
+block content
+  h1.mt-5 #{title}
+  div.container
+    form.form-signin(method='POST' action='/')
+      div.form-row
+        input.form-control.col-8.offset-2(type='text' name='input')
+      div.form-row.mt-2
+        div.form-group.col-3.offset-3
+          button.btn.btn-info.form-control(type='submit' onclick='this.form.action="/lucene";') via Lucene
+        div.form-group.col-3
+          button.btn.btn-info.form-control(type='submit' onclick='this.form.action="/pagerank";') via Page Rank

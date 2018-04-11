@@ -1,0 +1,23 @@
+extends layout
+
+block content
+    a(href='/').text-info < back
+    div.page-header
+        h1.text-info Latest News You Asked
+    if items.err
+        h2 #{items.err}
+        a(href='/') Back to search
+    else
+        ul.list-group
+        each item in items
+            li.list-group-item(style='border: none')
+                h5.mb-0
+                    u
+                        a(href=item.url).text-info #{item.title}
+                small
+                    u
+                        a(href=item.url).text-success URL: #{item.url}
+                br
+                small.text-success ID: #{item.id}
+                div.mt-1.mb-1 #{item.description}
+
