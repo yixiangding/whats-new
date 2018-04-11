@@ -2,6 +2,9 @@ var express = require('express');
 var router = express.Router();
 var solr = require('solr-client');
 var parseCsvPromise = require('../modules/parseCsv');
+var fs = require('fs');
+var path = require('path');
+
 
 var nameUrlMapPromise = parseCsvPromise.then(function (data) {
     console.log("map promised");
@@ -54,6 +57,8 @@ function renderSearchResult(query, nameUrlMap, res, solrClient) {
             var docs = obj["response"]["docs"];
             if (docs.length !== 0) {
                 var itemsToShow = getItemsToShow(docs, nameUrlMap);
+                // Export result to .txt file
+                writeToTxt(itemsToShow);
                 res.render('result', { items: itemsToShow });
             } else {
                 res.render('result', { items: {err: "No Results Found"} });
@@ -72,6 +77,7 @@ function getItemsToShow(docs, nameUrlMap) {
         var title = item['title'];
         var newItem = {
             id: id,
+            shortId: shortId,
             url: url,
             description: description,
             title: title
@@ -81,6 +87,19 @@ function getItemsToShow(docs, nameUrlMap) {
     return items;
 }
 
+function writeToTxt(itemsToShow) {
+    var toWrite = "";
+    var count = 1;
+    itemsToShow.forEach(function (item) {
+        toWrite += count + "," + item.shortId + "," + item.url + '\n';
+    });
+    toWrite += '\n' + '-------------------------------' + '\n';
+    fs.writeFile(path.join(__dirname, '../url_table.txt'), toWrite, function (err) {
+        if (err)
+            throw err;
+        console.log("Write to TXT complete");
+    })
+}
 
 /*
     POST: Page Rank Algorithm
