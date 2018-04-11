@@ -57,8 +57,8 @@ function renderSearchResult(query, nameUrlMap, res, solrClient) {
             var docs = obj["response"]["docs"];
             if (docs.length !== 0) {
                 var itemsToShow = getItemsToShow(docs, nameUrlMap);
-                // Export result to .txt file
-                writeToTxt(itemsToShow);
+                // Export result to .txt file (to populate into table)
+                // writeToTxt(itemsToShow);
                 res.render('result', { items: itemsToShow });
             } else {
                 res.render('result', { items: {err: "No Results Found"} });
@@ -91,10 +91,10 @@ function writeToTxt(itemsToShow) {
     var toWrite = "";
     var count = 1;
     itemsToShow.forEach(function (item) {
-        toWrite += count + "," + item.shortId + "," + item.url + '\n';
+        toWrite += count++ + "," + item.shortId + "," + item.url + '\n';
     });
     toWrite += '\n' + '-------------------------------' + '\n';
-    fs.writeFile(path.join(__dirname, '../url_table.txt'), toWrite, function (err) {
+    fs.appendFile(path.join(__dirname, '../url_table.txt'), toWrite, function (err) {
         if (err)
             throw err;
         console.log("Write to TXT complete");
