@@ -20,7 +20,38 @@ router.get('/', function (req, res) {
 });
 
 /*
-    POST: Lucene (default) Algorithm
+    GET: get auto-complete suggestion
+ */
+router.get('/autocomplete', function (req, res) {
+    var availableTags = [
+        "ActionScript",
+        "AppleScript",
+        "Asp",
+        "BASIC",
+        "C",
+        "C++",
+        "Clojure",
+        "COBOL",
+        "ColdFusion",
+        "Erlang",
+        "Fortran",
+        "Groovy",
+        "Haskell",
+        "Java",
+        "JavaScript",
+        "Lisp",
+        "Perl",
+        "PHP",
+        "Python",
+        "Ruby",
+        "Scala",
+        "Scheme"
+    ];
+    res.send(availableTags);
+});
+
+/*
+    POST: Lucene (default) Algorithm Endpoint
  */
 router.post('/lucene', function (req, res) {
     
@@ -102,7 +133,7 @@ function writeToTxt(itemsToShow) {
 }
 
 /*
-    POST: Page Rank Algorithm
+    POST: Page Rank Algorithm Endpoint
  */
 router.post('/pagerank', function (req, res) {
 
