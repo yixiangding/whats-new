@@ -3,8 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="c1fbdee2-db64-4aa6-a6f8-2d278107038e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/index.js" afterPath="$PROJECT_DIR$/public/javascripts/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
@@ -23,7 +22,7 @@
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+              <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding />
             </state>
           </provider>
@@ -42,13 +41,13 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+            <state relative-caret-position="357">
+              <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
               <folding>
                 <element signature="n#!!block;n#renderSearchResult#0" expanded="false" />
                 <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
                 <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-                <element signature="e#3594#4142#0" expanded="false" />
+                <element signature="e#4184#4732#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -58,7 +57,7 @@
         <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="120">
-              <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+              <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
               <folding />
             </state>
           </provider>
@@ -114,8 +113,8 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -248,7 +247,7 @@
       <workItem from="1523162665958" duration="12989000" />
       <workItem from="1523337343822" duration="27683000" />
       <workItem from="1523503233969" duration="1840000" />
-      <workItem from="1524199293244" duration="3849000" />
+      <workItem from="1524199293244" duration="5298000" />
     </task>
     <task id="LOCAL-00001" summary="Lucene &amp; PR search complete">
       <created>1523422079470</created>
@@ -285,11 +284,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524205588949</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="Global variable solrDomainName">
+      <created>1524250367662</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1524250367663</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="46361000" />
+    <option name="totallyTimeSpent" value="47810000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -345,7 +351,8 @@
     <MESSAGE value="disabled file writing" />
     <MESSAGE value="Include table parse &amp; edgeList generator" />
     <MESSAGE value="Hard coded autocomplete" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hard coded autocomplete" />
+    <MESSAGE value="Global variable solrDomainName" />
+    <option name="LAST_COMMIT_MESSAGE" value="Global variable solrDomainName" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -394,7 +401,7 @@
             <element signature="n#!!block;n#renderSearchResult#0" expanded="false" />
             <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#3594#4142#0" expanded="false" />
+            <element signature="e#4184#4732#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -439,7 +446,7 @@
             <element signature="n#!!block;n#renderSearchResult#0" expanded="false" />
             <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#3594#4142#0" expanded="false" />
+            <element signature="e#4184#4732#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -475,7 +482,7 @@
             <element signature="n#!!block;n#renderSearchResult#0" expanded="false" />
             <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#3594#4142#0" expanded="false" />
+            <element signature="e#4184#4732#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -555,14 +562,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="46" lean-forward="true" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/parseCsv.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -571,23 +570,31 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="120">
+          <caret line="8" column="46" lean-forward="false" selection-start-line="8" selection-start-column="46" selection-end-line="8" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
-          <caret line="11" column="17" lean-forward="false" selection-start-line="11" selection-start-column="17" selection-end-line="11" selection-end-column="17" />
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="26" column="45" lean-forward="false" selection-start-line="26" selection-start-column="45" selection-end-line="26" selection-end-column="45" />
+        <state relative-caret-position="357">
+          <caret line="34" column="24" lean-forward="true" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
           <folding>
             <element signature="n#!!block;n#renderSearchResult#0" expanded="false" />
             <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#3594#4142#0" expanded="false" />
+            <element signature="e#4184#4732#0" expanded="false" />
           </folding>
         </state>
       </provider>

@@ -4,6 +4,7 @@ var solr = require('solr-client');
 var parseCsvPromise = require('../modules/parseCsv');
 var fs = require('fs');
 var path = require('path');
+var axios = require('axios');
 
 
 var nameUrlMapPromise = parseCsvPromise.then(function (data) {
@@ -24,33 +25,44 @@ router.get('/', function (req, res) {
  */
 router.get('/autocomplete', function (req, res) {
     var currentInput = req.query.currentInput;
-    var solrSuggestEndpoint = solrDomainName;
-    // make a axios call to solr
-    var availableTags = [
-        "ActionScript",
-        "AppleScript",
-        "Asp",
-        "BASIC",
-        "C",
-        "C++",
-        "Clojure",
-        "COBOL",
-        "ColdFusion",
-        "Erlang",
-        "Fortran",
-        "Groovy",
-        "Haskell",
-        "Java",
-        "JavaScript",
-        "Lisp",
-        "Perl",
-        "PHP",
-        "Python",
-        "Ruby",
-        "Scala",
-        "Scheme"
-    ];
-    res.send(availableTags);
+    var solrSuggestEndpoint = 'http://localhost:8983/solr/Lucene/suggest?q=' + currentInput;
+    axios.get(solrSuggestEndpoint).then(function (response) {
+        var suggestions = response.data.suggest.suggest[currentInput].suggestions;
+        suggestions.sort(function (a, b) {
+            return b.weight - a.weight;
+        });
+        var terms = suggestions.map(function (item) { return item.term });
+        res.send(terms);
+    }).catch(function (error) {
+        console.log(error.data);
+        res.send([]);
+    });
+    // // make a axios call to solr
+    // var availableTags = [
+    //     "ActionScript",
+    //     "AppleScript",
+    //     "Asp",
+    //     "BASIC",
+    //     "C",
+    //     "C++",
+    //     "Clojure",
+    //     "COBOL",
+    //     "ColdFusion",
+    //     "Erlang",
+    //     "Fortran",
+    //     "Groovy",
+    //     "Haskell",
+    //     "Java",
+    //     "JavaScript",
+    //     "Lisp",
+    //     "Perl",
+    //     "PHP",
+    //     "Python",
+    //     "Ruby",
+    //     "Scala",
+    //     "Scheme"
+    // ];
+    // res.send(availableTags);
 });
 
 /*
