@@ -23,6 +23,9 @@ router.get('/', function (req, res) {
     GET: get auto-complete suggestion
  */
 router.get('/autocomplete', function (req, res) {
+    var currentInput = req.query.currentInput;
+    var solrSuggestEndpoint = solrDomainName;
+    // make a axios call to solr
     var availableTags = [
         "ActionScript",
         "AppleScript",
@@ -62,7 +65,7 @@ router.post('/lucene', function (req, res) {
     }
 
     var solrClient = solr.createClient({
-        "host": "127.0.0.1",
+        "host": solrDomainName,
         "port": 8983,
         "path": "/solr",
         "core": "Lucene"
@@ -144,7 +147,7 @@ router.post('/pagerank', function (req, res) {
     }
 
     var solrClient = solr.createClient({
-        "host": "127.0.0.1",
+        "host": solrDomainName,
         "port": 8983,
         "path": "/solr",
         "core": "PR"

@@ -6,7 +6,7 @@ $( function () {
                 url: "/autocomplete",
                 dataType: "json",
                 data: {
-                    q: request.term
+                    currentInput: request.term
                 },
                 success: function( data ) {
                     response( data );

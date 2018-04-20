@@ -9,6 +9,8 @@ var indexRouter = require('./routes/index');
 
 var app = express();
 
+global.solrDomainName = "127.0.0.1";
+
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
