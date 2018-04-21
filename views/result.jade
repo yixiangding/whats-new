@@ -4,6 +4,10 @@ block content
     a(href='/').text-info < back
     div.page-header
         h1.text-info Latest News You Asked
+    if correctedTerms
+        div.mt-4.mb-4.h5
+            span.text-danger.font-italic.mr-1 Did you mean:
+            a(href='/') #{correctedTerms}
     if items.err
         h2 #{items.err}
         a(href='/') Back to search

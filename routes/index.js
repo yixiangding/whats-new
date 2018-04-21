@@ -7,17 +7,19 @@ var path = require('path');
 var axios = require('axios');
 var spell = require('spell');
 
-var spellChecker = spell();
-loadSpellChecker();
-
-function loadSpellChecker() {
-    fs.readFile(path.join(__dirname, '../big.txt'), { encoding: 'utf8' }, function (err, text) {
-        if (err) {
-            return console.log("Error happened when parsing big.txt");
-        }
-        spellChecker.load(text);
-        console.log("spell checker loaded");
-        console.log(spellChecker.suggest('the'));
+var loadCheckerPromise = loadSpellCheckerPromise();
+function loadSpellCheckerPromise() {
+    var spellChecker = spell();
+    return new Promise(function (resolve, reject) {
+        fs.readFile(path.join(__dirname, '../big.txt'), { encoding: 'utf8' }, function (err, text) {
+            if (err) {
+                return console.log("Error happened when parsing big.txt");
+            }
+            spellChecker.load(text);
+            console.log("spell checker loaded");
+            resolve(spellChecker);
+            // console.log(spellChecker.suggest('the'));
+        });
     });
 }
 
@@ -59,8 +61,8 @@ var nameUrlMapPromise = parseCsvPromise.then(function (data) {
  */
 router.post('/lucene', function (req, res) {
     
-    var terms = req.body.input;
-    if (!terms) {
+    var inputTerms = req.body.input;
+    if (!inputTerms) {
         res.send('no result');
         return;
     }
@@ -72,18 +74,41 @@ router.post('/lucene', function (req, res) {
         "core": "Lucene"
     });
 
-    nameUrlMapPromise.then(function (nameUrlMap) {
-        var luceneQuery = createLuceneQuery();
-        renderSearchResult(luceneQuery, nameUrlMap, res, solrClient);
+    loadCheckerPromise.then(function (spellChecker) {
+        nameUrlMapPromise.then(function (nameUrlMap) {
+            var luceneQuery = createLuceneQuery();
+            var correctedTerms = getCorrectedTerms(spellChecker);
+            console.log('terms:', correctedTerms, inputTerms);
+            if (correctedTerms === inputTerms) {
+                renderResultPage(luceneQuery, nameUrlMap, res, solrClient);
+            } else {
+                console.log("passed:", correctedTerms);
+                renderResultPage(luceneQuery, nameUrlMap, res, solrClient, correctedTerms);
+            }
+        });
     });
 
+    function getCorrectedTerms(spellChecker) {
+        var inputTermArray = inputTerms.split(' ');
+        var isCorrected = false;
+        var correctedTermArray = [];
+        inputTermArray.forEach(function (term) {
+            var suggestedTerm = spellChecker.suggest(term)[0]['word'];
+            if (suggestedTerm !== term) {
+                isCorrected = true;
+            }
+            correctedTermArray.push(suggestedTerm);
+        });
+        return correctedTermArray.join(' ');
+    }
+
     function createLuceneQuery() {
-        return solrClient.createQuery().q(terms).start(0).rows(10);
+        return solrClient.createQuery().q(inputTerms).start(0).rows(10);
     }
 
 });
 
-function renderSearchResult(query, nameUrlMap, res, solrClient) {
+function renderResultPage(query, nameUrlMap, res, solrClient, correctedTerms) {
     solrClient.search(query, function (err, obj) {
         if (err) {
             console.log(err);
@@ -94,9 +119,9 @@ function renderSearchResult(query, nameUrlMap, res, solrClient) {
                 var itemsToShow = getItemsToShow(docs, nameUrlMap);
                 // Export result to .txt file (to populate into table)
                 // writeToTxt(itemsToShow);
-                res.render('result', { items: itemsToShow });
+                res.render('result', { items: itemsToShow, correctedTerms: correctedTerms });
             } else {
-                res.render('result', { items: {err: "No Results Found"} });
+                res.render('result', { items: {err: "No Results Found"}, correctedTerms: correctedTerms });
             }
         }
     });
@@ -156,7 +181,7 @@ router.post('/pagerank', function (req, res) {
 
     nameUrlMapPromise.then(function (nameUrlMap) {
         var prQuery = createPrQuery();
-        renderSearchResult(prQuery, nameUrlMap, res, solrClient);
+        renderResultPage(prQuery, nameUrlMap, res, solrClient);
     });
 
     function createPrQuery() {

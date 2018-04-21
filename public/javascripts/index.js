@@ -1,5 +1,4 @@
 $( function () {
-
     $('input').autocomplete({
         source: function (request, response) {
             $.ajax({
