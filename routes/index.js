@@ -5,15 +5,21 @@ var parseCsvPromise = require('../modules/parseCsv');
 var fs = require('fs');
 var path = require('path');
 var axios = require('axios');
+var spell = require('spell');
 
+var spellChecker = spell();
+loadSpellChecker();
 
-var nameUrlMapPromise = parseCsvPromise.then(function (data) {
-    console.log("map promised");
-    return data;
-})
-    .catch(function (err) {
-        return err;
+function loadSpellChecker() {
+    fs.readFile(path.join(__dirname, '../big.txt'), { encoding: 'utf8' }, function (err, text) {
+        if (err) {
+            return console.log("Error happened when parsing big.txt");
+        }
+        spellChecker.load(text);
+        console.log("spell checker loaded");
+        console.log(spellChecker.suggest('the'));
     });
+}
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -37,33 +43,16 @@ router.get('/autocomplete', function (req, res) {
         console.log(error.data);
         res.send([]);
     });
-    // // make a axios call to solr
-    // var availableTags = [
-    //     "ActionScript",
-    //     "AppleScript",
-    //     "Asp",
-    //     "BASIC",
-    //     "C",
-    //     "C++",
-    //     "Clojure",
-    //     "COBOL",
-    //     "ColdFusion",
-    //     "Erlang",
-    //     "Fortran",
-    //     "Groovy",
-    //     "Haskell",
-    //     "Java",
-    //     "JavaScript",
-    //     "Lisp",
-    //     "Perl",
-    //     "PHP",
-    //     "Python",
-    //     "Ruby",
-    //     "Scala",
-    //     "Scheme"
-    // ];
-    // res.send(availableTags);
 });
+
+
+var nameUrlMapPromise = parseCsvPromise.then(function (data) {
+    console.log("map promised");
+    return data;
+})
+    .catch(function (err) {
+        return err;
+    });
 
 /*
     POST: Lucene (default) Algorithm Endpoint
@@ -72,7 +61,7 @@ router.post('/lucene', function (req, res) {
     
     var terms = req.body.input;
     if (!terms) {
-        res.render('error');
+        res.send('no result');
         return;
     }
 
