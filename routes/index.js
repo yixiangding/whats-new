@@ -59,9 +59,9 @@ var nameUrlMapPromise = parseCsvPromise.then(function (data) {
 /*
     POST: Lucene (default) Algorithm Endpoint
  */
-router.post('/lucene', function (req, res) {
+router.get('/lucene', function (req, res) {
     
-    var inputTerms = req.body.input;
+    var inputTerms = req.query.input;
     if (!inputTerms) {
         res.send('no result');
         return;

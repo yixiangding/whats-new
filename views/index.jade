@@ -3,7 +3,7 @@ extends layout
 block content
   h1.mt-5 #{title}
   div.container
-    form.form-signin(method='POST' action='/')
+    form.form-signin(method='GET' action='/')
       div.form-row
         input.form-control.col-8.offset-2(type='text' name='input' id='input')
       div.form-row.mt-2

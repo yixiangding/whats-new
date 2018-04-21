@@ -6,8 +6,10 @@ block content
         h1.text-info Latest News You Asked
     if correctedTerms
         div.mt-4.mb-4.h5
+            form.form-signin(method='POST' action='/lucene' id='invisible-form' type='hidden')
+                input(type="hidden" value='' id='invisible-input')
             span.text-danger.font-italic.mr-1 Did you mean:
-            a(href='/') #{correctedTerms}
+            a(href="/lucene?input=" + correctedTerms) #{correctedTerms}
     if items.err
         h2 #{items.err}
         a(href='/') Back to search
@@ -24,4 +26,6 @@ block content
                 br
                 small.text-success ID: #{item.id}
                 div.mt-1.mb-1 #{item.description}
+
+    script(src="/javascripts/result.js")
 
