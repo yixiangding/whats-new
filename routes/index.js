@@ -7,8 +7,8 @@ var path = require('path');
 var axios = require('axios');
 var spell = require('spell');
 
-var loadCheckerPromise = loadSpellCheckerPromise();
-function loadSpellCheckerPromise() {
+var loadSpellCheckerPromise = getLoadSpellCheckerPromise();
+function getLoadSpellCheckerPromise() {
     var spellChecker = spell();
     return new Promise(function (resolve, reject) {
         fs.readFile(path.join(__dirname, '../big.txt'), { encoding: 'utf8' }, function (err, text) {
@@ -60,33 +60,35 @@ var nameUrlMapPromise = parseCsvPromise.then(function (data) {
     POST: Lucene (default) Algorithm Endpoint
  */
 router.get('/lucene', function (req, res) {
-    
     var inputTerms = req.query.input;
     if (!inputTerms) {
         res.send('no result');
         return;
     }
-
     var solrClient = solr.createClient({
         "host": solrDomainName,
         "port": 8983,
         "path": "/solr",
         "core": "Lucene"
     });
-
-    loadCheckerPromise.then(function (spellChecker) {
+    loadSpellCheckerPromise.then(function (spellChecker) {
         nameUrlMapPromise.then(function (nameUrlMap) {
-            var luceneQuery = createLuceneQuery();
-            var correctedTerms = getCorrectedTerms(spellChecker);
-            console.log('terms:', correctedTerms, inputTerms);
-            if (correctedTerms === inputTerms) {
-                renderResultPage(luceneQuery, nameUrlMap, res, solrClient);
-            } else {
-                console.log("passed:", correctedTerms);
-                renderResultPage(luceneQuery, nameUrlMap, res, solrClient, correctedTerms);
-            }
+            renderResultAndCorrection(spellChecker, nameUrlMap);
         });
     });
+
+
+    function renderResultAndCorrection(spellChecker, nameUrlMap) {
+        var luceneQuery = createLuceneQuery();
+        var correctedTerms = getCorrectedTerms(spellChecker);
+        console.log('terms:', correctedTerms, inputTerms);
+        if (correctedTerms.toLowerCase() === inputTerms.toLowerCase()) {
+            renderResultPage(luceneQuery, nameUrlMap, res, solrClient);
+        } else {
+            console.log("passed:", correctedTerms);
+            renderResultPage(luceneQuery, nameUrlMap, res, solrClient, correctedTerms);
+        }
+    }
 
     function getCorrectedTerms(spellChecker) {
         var inputTermArray = inputTerms.split(' ');

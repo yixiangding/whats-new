@@ -2,12 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1fbdee2-db64-4aa6-a6f8-2d278107038e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/modules/NorvigSpellChecker.js" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/result.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/javascripts/result.js" afterPath="$PROJECT_DIR$/public/javascripts/result.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/index.jade" afterPath="$PROJECT_DIR$/views/index.jade" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/result.jade" afterPath="$PROJECT_DIR$/views/result.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -24,7 +21,7 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-5">
+            <state relative-caret-position="0">
               <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
               <folding />
             </state>
@@ -34,29 +31,22 @@
       <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
+            <state relative-caret-position="963">
+              <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
               <folding>
-                <element signature="e#911#965#0" expanded="false" />
-                <element signature="e#1062#1640#0" expanded="false" />
-                <element signature="e#1706#1759#0" expanded="false" />
-                <element signature="e#1787#1814#0" expanded="false" />
-                <element signature="e#1979#2033#0" expanded="false" />
-                <element signature="e#2074#2185#0" expanded="false" />
-                <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
+                <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+                <element signature="e#922#976#0" expanded="false" />
+                <element signature="e#1073#1651#0" expanded="false" />
+                <element signature="e#1717#1770#0" expanded="false" />
+                <element signature="e#1798#1825#0" expanded="false" />
+                <element signature="e#1985#2039#0" expanded="false" />
+                <element signature="e#2079#2190#0" expanded="false" />
+                <element signature="e#2459#2946#0" expanded="false" />
+                <element signature="e#2993#3443#0" expanded="false" />
+                <element signature="e#3478#3558#0" expanded="false" />
                 <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-                <element signature="e#5269#5815#0" expanded="false" />
+                <element signature="e#5410#5956#0" expanded="false" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.jade" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/index.jade">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
-              <folding />
             </state>
           </provider>
         </entry>
@@ -71,21 +61,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/result.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="result.jade" pinned="false" current-in-tab="false">
+      <file leaf-file-name="result.jade" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/views/result.jade">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="165">
-              <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+              <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
               <folding />
             </state>
           </provider>
@@ -122,9 +102,9 @@
         <option value="$PROJECT_DIR$/modules/NorvigSpellChecker.js" />
         <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/views/result.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/result.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -176,6 +156,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -219,7 +200,6 @@
         </subPane>
       </pane>
       <pane id="Scratches" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -258,7 +238,9 @@
       <workItem from="1523337343822" duration="27683000" />
       <workItem from="1523503233969" duration="1840000" />
       <workItem from="1524199293244" duration="12650000" />
-      <workItem from="1524286784844" duration="4154000" />
+      <workItem from="1524286784844" duration="4657000" />
+      <workItem from="1524514804701" duration="6000" />
+      <workItem from="1524543275899" duration="1044000" />
     </task>
     <task id="LOCAL-00001" summary="Lucene &amp; PR search complete">
       <created>1523422079470</created>
@@ -323,11 +305,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524285876904</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="Fixed &quot;Did you mean&quot; jumping: change Lucene to &quot;GET&quot;">
+      <created>1524291140276</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1524291140276</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="59316000" />
+    <option name="totallyTimeSpent" value="60869000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -387,11 +376,12 @@
     <MESSAGE value="sorted auto-complete done" />
     <MESSAGE value="spell checker works" />
     <MESSAGE value="spell checker: did you mean - Added" />
-    <option name="LAST_COMMIT_MESSAGE" value="spell checker: did you mean - Added" />
+    <MESSAGE value="Fixed &quot;Did you mean&quot; jumping: change Lucene to &quot;GET&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="Fixed &quot;Did you mean&quot; jumping: change Lucene to &quot;GET&quot;" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="2" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -406,18 +396,143 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/routes/index.js">
       <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="82" column="75" lean-forward="false" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+          <folding>
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
+            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/result.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="795">
+          <caret line="82" column="75" lean-forward="true" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
+          <folding>
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
+            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/result.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/index.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="true" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1410">
           <caret line="123" column="103" lean-forward="false" selection-start-line="123" selection-start-column="103" selection-end-line="123" selection-end-column="103" />
           <folding>
-            <element signature="e#911#965#0" expanded="false" />
-            <element signature="e#1062#1640#0" expanded="false" />
-            <element signature="e#1706#1759#0" expanded="false" />
-            <element signature="e#1787#1814#0" expanded="false" />
-            <element signature="e#1979#2033#0" expanded="false" />
-            <element signature="e#2074#2185#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5269#5815#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -473,15 +588,18 @@
         <state relative-caret-position="765">
           <caret line="93" column="72" lean-forward="true" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
           <folding>
-            <element signature="e#911#965#0" expanded="false" />
-            <element signature="e#1062#1640#0" expanded="false" />
-            <element signature="e#1706#1759#0" expanded="false" />
-            <element signature="e#1787#1814#0" expanded="false" />
-            <element signature="e#1979#2033#0" expanded="false" />
-            <element signature="e#2074#2185#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5269#5815#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -521,15 +639,18 @@
         <state relative-caret-position="540">
           <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding>
-            <element signature="e#911#965#0" expanded="false" />
-            <element signature="e#1062#1640#0" expanded="false" />
-            <element signature="e#1706#1759#0" expanded="false" />
-            <element signature="e#1787#1814#0" expanded="false" />
-            <element signature="e#1979#2033#0" expanded="false" />
-            <element signature="e#2074#2185#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5269#5815#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -562,15 +683,18 @@
         <state relative-caret-position="360">
           <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding>
-            <element signature="e#911#965#0" expanded="false" />
-            <element signature="e#1062#1640#0" expanded="false" />
-            <element signature="e#1706#1759#0" expanded="false" />
-            <element signature="e#1787#1814#0" expanded="false" />
-            <element signature="e#1979#2033#0" expanded="false" />
-            <element signature="e#2074#2185#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5269#5815#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -649,7 +773,7 @@
     <entry file="file://$PROJECT_DIR$/modules/NorvigSpellChecker.js" />
     <entry file="file://$PROJECT_DIR$/app.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-5">
+        <state relative-caret-position="0">
           <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
           <folding />
         </state>
@@ -659,41 +783,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="1014" column="0" lean-forward="false" selection-start-line="1014" selection-start-column="0" selection-end-line="1014" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
-          <caret line="64" column="13" lean-forward="false" selection-start-line="64" selection-start-column="13" selection-end-line="64" selection-end-column="13" />
-          <folding>
-            <element signature="e#911#965#0" expanded="false" />
-            <element signature="e#1062#1640#0" expanded="false" />
-            <element signature="e#1706#1759#0" expanded="false" />
-            <element signature="e#1787#1814#0" expanded="false" />
-            <element signature="e#1979#2033#0" expanded="false" />
-            <element signature="e#2074#2185#0" expanded="false" />
-            <element signature="n#!!block;n#getItemsToShow#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5269#5815#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/result.jade">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="71" lean-forward="true" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/result.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -707,8 +796,45 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/views/index.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="32" lean-forward="false" selection-start-line="5" selection-start-column="32" selection-end-line="5" selection-end-column="32" />
+        <state relative-caret-position="210">
+          <caret line="14" column="37" lean-forward="false" selection-start-line="14" selection-start-column="37" selection-end-line="14" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/result.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="31" lean-forward="true" selection-start-line="10" selection-start-column="31" selection-end-line="10" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="963">
+          <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+          <folding>
+            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
+            <element signature="e#922#976#0" expanded="false" />
+            <element signature="e#1073#1651#0" expanded="false" />
+            <element signature="e#1717#1770#0" expanded="false" />
+            <element signature="e#1798#1825#0" expanded="false" />
+            <element signature="e#1985#2039#0" expanded="false" />
+            <element signature="e#2079#2190#0" expanded="false" />
+            <element signature="e#2459#2946#0" expanded="false" />
+            <element signature="e#2993#3443#0" expanded="false" />
+            <element signature="e#3478#3558#0" expanded="false" />
+            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
+            <element signature="e#5410#5956#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/result.jade">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
           <folding />
         </state>
       </provider>
