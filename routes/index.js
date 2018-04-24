@@ -2,26 +2,12 @@ var express = require('express');
 var router = express.Router();
 var solr = require('solr-client');
 var parseCsvPromise = require('../modules/parseCsv');
+var spellCheckLoader = require('../modules/loadSpellCheck');
 var fs = require('fs');
 var path = require('path');
 var axios = require('axios');
-var spell = require('spell');
 
-var loadSpellCheckerPromise = getLoadSpellCheckerPromise();
-function getLoadSpellCheckerPromise() {
-    var spellChecker = spell();
-    return new Promise(function (resolve, reject) {
-        fs.readFile(path.join(__dirname, '../big.txt'), { encoding: 'utf8' }, function (err, text) {
-            if (err) {
-                return console.log("Error happened when parsing big.txt");
-            }
-            spellChecker.load(text);
-            console.log("spell checker loaded");
-            resolve(spellChecker);
-            // console.log(spellChecker.suggest('the'));
-        });
-    });
-}
+var loadSpellCheckerPromise = spellCheckLoader();
 
 /* GET home page. */
 router.get('/', function (req, res) {

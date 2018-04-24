@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="c1fbdee2-db64-4aa6-a6f8-2d278107038e" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/public/javascripts/result.js" afterPath="" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/modules/loadSpellCheck.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
     </list>
@@ -28,44 +28,42 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="963">
-              <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
+            <state relative-caret-position="150">
+              <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
               <folding>
-                <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-                <element signature="e#922#976#0" expanded="false" />
-                <element signature="e#1073#1651#0" expanded="false" />
-                <element signature="e#1717#1770#0" expanded="false" />
-                <element signature="e#1798#1825#0" expanded="false" />
-                <element signature="e#1985#2039#0" expanded="false" />
-                <element signature="e#2079#2190#0" expanded="false" />
-                <element signature="e#2459#2946#0" expanded="false" />
-                <element signature="e#2993#3443#0" expanded="false" />
-                <element signature="e#3478#3558#0" expanded="false" />
-                <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-                <element signature="e#5410#5956#0" expanded="false" />
+                <element signature="e#406#460#0" expanded="false" />
+                <element signature="e#557#1135#0" expanded="false" />
+                <element signature="e#1201#1254#0" expanded="false" />
+                <element signature="e#1282#1309#0" expanded="false" />
+                <element signature="e#1469#1523#0" expanded="false" />
+                <element signature="e#1563#1674#0" expanded="false" />
+                <element signature="e#1943#2430#0" expanded="false" />
+                <element signature="e#2477#2927#0" expanded="false" />
+                <element signature="e#2962#3042#0" expanded="false" />
+                <element signature="e#4894#5440#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <file leaf-file-name="loadSpellCheck.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/modules/loadSpellCheck.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="75">
-              <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="33" />
+            <state relative-caret-position="30">
+              <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="result.jade" pinned="false" current-in-tab="true">
+      <file leaf-file-name="result.jade" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/views/result.jade">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+            <state relative-caret-position="405">
+              <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
               <folding />
             </state>
           </provider>
@@ -104,6 +102,7 @@
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/views/result.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/result.js" />
+        <option value="$PROJECT_DIR$/modules/loadSpellCheck.js" />
         <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
@@ -240,7 +239,7 @@
       <workItem from="1524199293244" duration="12650000" />
       <workItem from="1524286784844" duration="4657000" />
       <workItem from="1524514804701" duration="6000" />
-      <workItem from="1524543275899" duration="1044000" />
+      <workItem from="1524543275899" duration="1847000" />
     </task>
     <task id="LOCAL-00001" summary="Lucene &amp; PR search complete">
       <created>1523422079470</created>
@@ -312,11 +311,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524291140276</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="deleted result.js (no need since change query to GET)">
+      <created>1524544373361</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1524544373361</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="60869000" />
+    <option name="totallyTimeSpent" value="61672000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -377,7 +383,8 @@
     <MESSAGE value="spell checker works" />
     <MESSAGE value="spell checker: did you mean - Added" />
     <MESSAGE value="Fixed &quot;Did you mean&quot; jumping: change Lucene to &quot;GET&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="Fixed &quot;Did you mean&quot; jumping: change Lucene to &quot;GET&quot;" />
+    <MESSAGE value="deleted result.js (no need since change query to GET)" />
+    <option name="LAST_COMMIT_MESSAGE" value="deleted result.js (no need since change query to GET)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -399,18 +406,16 @@
         <state relative-caret-position="795">
           <caret line="82" column="75" lean-forward="false" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -460,18 +465,16 @@
         <state relative-caret-position="795">
           <caret line="82" column="75" lean-forward="true" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -521,18 +524,16 @@
         <state relative-caret-position="1410">
           <caret line="123" column="103" lean-forward="false" selection-start-line="123" selection-start-column="103" selection-end-line="123" selection-end-column="103" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -588,18 +589,16 @@
         <state relative-caret-position="765">
           <caret line="93" column="72" lean-forward="true" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -639,18 +638,16 @@
         <state relative-caret-position="540">
           <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -683,18 +680,16 @@
         <state relative-caret-position="360">
           <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -771,26 +766,10 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/modules/NorvigSpellChecker.js" />
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="176">
           <caret line="1014" column="0" lean-forward="false" selection-start-line="1014" selection-start-column="0" selection-end-line="1014" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="16" lean-forward="false" selection-start-line="5" selection-start-column="16" selection-end-line="5" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -810,32 +789,54 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="963">
-          <caret line="131" column="42" lean-forward="true" selection-start-line="131" selection-start-column="42" selection-end-line="131" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!block;n#getLoadSpellCheckerPromise#0" expanded="false" />
-            <element signature="e#922#976#0" expanded="false" />
-            <element signature="e#1073#1651#0" expanded="false" />
-            <element signature="e#1717#1770#0" expanded="false" />
-            <element signature="e#1798#1825#0" expanded="false" />
-            <element signature="e#1985#2039#0" expanded="false" />
-            <element signature="e#2079#2190#0" expanded="false" />
-            <element signature="e#2459#2946#0" expanded="false" />
-            <element signature="e#2993#3443#0" expanded="false" />
-            <element signature="e#3478#3558#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5410#5956#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/result.jade">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="71" lean-forward="false" selection-start-line="11" selection-start-column="71" selection-end-line="11" selection-end-column="71" />
+        <state relative-caret-position="405">
+          <caret line="27" column="49" lean-forward="true" selection-start-line="27" selection-start-column="49" selection-end-line="27" selection-end-column="49" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="11" column="34" lean-forward="false" selection-start-line="11" selection-start-column="34" selection-end-line="11" selection-end-column="34" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/loadSpellCheck.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="27" lean-forward="true" selection-start-line="2" selection-start-column="27" selection-end-line="2" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
+          <folding>
+            <element signature="e#406#460#0" expanded="false" />
+            <element signature="e#557#1135#0" expanded="false" />
+            <element signature="e#1201#1254#0" expanded="false" />
+            <element signature="e#1282#1309#0" expanded="false" />
+            <element signature="e#1469#1523#0" expanded="false" />
+            <element signature="e#1563#1674#0" expanded="false" />
+            <element signature="e#1943#2430#0" expanded="false" />
+            <element signature="e#2477#2927#0" expanded="false" />
+            <element signature="e#2962#3042#0" expanded="false" />
+            <element signature="e#4894#5440#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>
