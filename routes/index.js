@@ -2,7 +2,7 @@ var express = require('express');
 var router = express.Router();
 var solr = require('solr-client');
 var parseCsvPromise = require('../modules/parseCsv');
-var spellCheckLoader = require('../modules/loadSpellCheck');
+var spellCheckLoader = require('../modules/spellCheckLoader');
 var fs = require('fs');
 var path = require('path');
 var axios = require('axios');
@@ -35,7 +35,7 @@ router.get('/autocomplete', function (req, res) {
 
 
 var nameUrlMapPromise = parseCsvPromise.then(function (data) {
-    console.log("map promised");
+    console.log("name -> url map promised");
     return data;
 })
     .catch(function (err) {
