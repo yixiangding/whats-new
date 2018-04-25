@@ -3,9 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="c1fbdee2-db64-4aa6-a6f8-2d278107038e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app.js" afterPath="$PROJECT_DIR$/app.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/modules/snippetMaker.js" afterPath="$PROJECT_DIR$/modules/snippetMaker.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/routes/index.js" afterPath="$PROJECT_DIR$/routes/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/views/result.jade" afterPath="$PROJECT_DIR$/views/result.jade" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -22,37 +23,37 @@
       <file leaf-file-name="app.js" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
+            <state relative-caret-position="75">
+              <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/routes/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="192">
-              <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="34" />
+            <state relative-caret-position="398">
+              <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
               <folding>
                 <element signature="e#518#572#0" expanded="false" />
-                <element signature="e#669#1247#0" expanded="false" />
-                <element signature="e#1406#1433#0" expanded="false" />
-                <element signature="e#1593#1647#0" expanded="false" />
-                <element signature="e#1687#1798#0" expanded="false" />
+                <element signature="e#1605#1632#0" expanded="false" />
+                <element signature="e#1731#3401#0" expanded="false" />
+                <element signature="e#1792#1846#0" expanded="false" />
+                <element signature="e#1886#1997#0" expanded="false" />
                 <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
                 <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-                <element signature="e#5399#5945#0" expanded="false" />
+                <element signature="e#5598#6144#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="snippetMaker.js" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/modules/snippetMaker.js">
+      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="358">
-              <caret line="38" column="73" lean-forward="true" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+            <state relative-caret-position="150">
+              <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -89,6 +90,7 @@
       <find>seven</find>
       <find>lower</find>
       <find>raw s</find>
+      <find>snippe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -104,16 +106,16 @@
         <option value="$PROJECT_DIR$/views/error.jade" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
         <option value="$PROJECT_DIR$/modules/NorvigSpellChecker.js" />
-        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
         <option value="$PROJECT_DIR$/views/index.jade" />
         <option value="$PROJECT_DIR$/public/javascripts/result.js" />
         <option value="$PROJECT_DIR$/modules/loadSpellCheck.js" />
         <option value="$PROJECT_DIR$/modules/spellCheckLoader.js" />
         <option value="$PROJECT_DIR$/modules/extractor.js" />
-        <option value="$PROJECT_DIR$/app.js" />
         <option value="$PROJECT_DIR$/views/result.jade" />
-        <option value="$PROJECT_DIR$/routes/index.js" />
         <option value="$PROJECT_DIR$/modules/snippetMaker.js" />
+        <option value="$PROJECT_DIR$/app.js" />
+        <option value="$PROJECT_DIR$/public/javascripts/index.js" />
+        <option value="$PROJECT_DIR$/routes/index.js" />
       </list>
     </option>
   </component>
@@ -232,7 +234,18 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Node.js.bin/www" />
+  <component name="RunManager" selected="Node.js.bin/www">
+    <configuration name="snippetMaker.js" type="NodeJSConfigurationType" factoryName="Node.js" temporary="true" path-to-node="project" path-to-js-file="snippetMaker.js" working-dir="$PROJECT_DIR$/modules" />
+    <list size="2">
+      <item index="0" class="java.lang.String" itemvalue="Node.js.bin/www" />
+      <item index="1" class="java.lang.String" itemvalue="Node.js.snippetMaker.js" />
+    </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Node.js.snippetMaker.js" />
+      </list>
+    </recent_temporary>
+  </component>
   <component name="ShelveChangesManager" show_recycled="false">
     <option name="remove_strategy" value="false" />
   </component>
@@ -251,7 +264,7 @@
       <workItem from="1524514804701" duration="6000" />
       <workItem from="1524543275899" duration="5748000" />
       <workItem from="1524588905505" duration="2000" />
-      <workItem from="1524627994356" duration="10207000" />
+      <workItem from="1524627994356" duration="13896000" />
     </task>
     <task id="LOCAL-00001" summary="Lucene &amp; PR search complete">
       <created>1523422079470</created>
@@ -351,11 +364,18 @@
       <option name="project" value="LOCAL" />
       <updated>1524630650247</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="Snippet">
+      <created>1524638316918</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1524638316918</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="75782000" />
+    <option name="totallyTimeSpent" value="79471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
@@ -420,7 +440,8 @@
     <MESSAGE value="made spell check loader external" />
     <MESSAGE value="add inDevelopment flag to adjust small.txt in development (faster parsing)" />
     <MESSAGE value="passing terms into 'renderResultPage'" />
-    <option name="LAST_COMMIT_MESSAGE" value="passing terms into 'renderResultPage'" />
+    <MESSAGE value="Snippet" />
+    <option name="LAST_COMMIT_MESSAGE" value="Snippet" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -459,13 +480,13 @@
           <caret line="82" column="75" lean-forward="true" selection-start-line="82" selection-start-column="75" selection-end-line="82" selection-end-column="75" />
           <folding>
             <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
             <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -507,13 +528,13 @@
           <caret line="123" column="103" lean-forward="false" selection-start-line="123" selection-start-column="103" selection-end-line="123" selection-end-column="103" />
           <folding>
             <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
             <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -563,13 +584,13 @@
           <caret line="93" column="72" lean-forward="true" selection-start-line="93" selection-start-column="72" selection-end-line="93" selection-end-column="72" />
           <folding>
             <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
             <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -610,13 +631,13 @@
           <caret line="60" column="43" lean-forward="true" selection-start-line="60" selection-start-column="43" selection-end-line="60" selection-end-column="43" />
           <folding>
             <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
             <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -650,13 +671,13 @@
           <caret line="24" column="46" lean-forward="true" selection-start-line="24" selection-start-column="46" selection-end-line="24" selection-end-column="46" />
           <folding>
             <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
             <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
             <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -725,13 +746,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/modules/parseCsv.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/modules/NorvigSpellChecker.js" />
     <entry file="jar://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/lib/JavaScriptLanguage.jar!/com/intellij/lang/javascript/index/predefined/DHTML.js">
       <provider selected="true" editor-type-id="text-editor">
@@ -748,13 +762,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/javascripts/result.js" />
-    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/FOX_News/HTML_files/0a0b46d3eaffb2cbc7d4c79de38e9b87.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-5192">
@@ -766,38 +773,6 @@
       <provider selected="true" editor-type-id="LargeFileEditor">
         <state relative-caret-position="386">
           <caret line="0" column="1271038" lean-forward="false" selection-start-line="0" selection-start-column="1271038" selection-end-line="0" selection-end-column="1271038" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/modules/spellCheckLoader.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="36" lean-forward="false" selection-start-line="3" selection-start-column="36" selection-end-line="3" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/routes/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="192">
-          <caret line="72" column="34" lean-forward="false" selection-start-line="72" selection-start-column="29" selection-end-line="72" selection-end-column="34" />
-          <folding>
-            <element signature="e#518#572#0" expanded="false" />
-            <element signature="e#669#1247#0" expanded="false" />
-            <element signature="e#1406#1433#0" expanded="false" />
-            <element signature="e#1593#1647#0" expanded="false" />
-            <element signature="e#1687#1798#0" expanded="false" />
-            <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
-            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
-            <element signature="e#5399#5945#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -817,11 +792,60 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" column="33" lean-forward="true" selection-start-line="5" selection-start-column="33" selection-end-line="5" selection-end-column="33" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/spellCheckLoader.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="62" lean-forward="false" selection-start-line="6" selection-start-column="62" selection-end-line="6" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/modules/parseCsv.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="20" column="14" lean-forward="false" selection-start-line="20" selection-start-column="14" selection-end-line="20" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/modules/snippetMaker.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="358">
-          <caret line="38" column="73" lean-forward="true" selection-start-line="38" selection-start-column="73" selection-end-line="38" selection-end-column="73" />
+        <state relative-caret-position="423">
+          <caret line="105" column="56" lean-forward="false" selection-start-line="105" selection-start-column="56" selection-end-line="105" selection-end-column="56" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/javascripts/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="10" column="37" lean-forward="false" selection-start-line="10" selection-start-column="37" selection-end-line="10" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routes/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="398">
+          <caret line="33" column="40" lean-forward="false" selection-start-line="33" selection-start-column="40" selection-end-line="33" selection-end-column="40" />
+          <folding>
+            <element signature="e#518#572#0" expanded="false" />
+            <element signature="e#1605#1632#0" expanded="false" />
+            <element signature="e#1731#3401#0" expanded="false" />
+            <element signature="e#1792#1846#0" expanded="false" />
+            <element signature="e#1886#1997#0" expanded="false" />
+            <element signature="n#!!block;n#createLuceneQuery#0" expanded="false" />
+            <element signature="n#!!block;n#writeToTxt#0" expanded="false" />
+            <element signature="e#5598#6144#0" expanded="false" />
+          </folding>
         </state>
       </provider>
     </entry>

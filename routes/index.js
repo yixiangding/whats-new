@@ -21,13 +21,18 @@ router.get('/', function (req, res) {
  */
 router.get('/autocomplete', function (req, res) {
     var currentInput = req.query.currentInput;
-    var solrSuggestEndpoint = 'http://localhost:8983/solr/Lucene/suggest?q=' + currentInput;
+    var termsArray = currentInput.split(' ');
+    var termToComplete = termsArray[termsArray.length - 1];
+    var solrSuggestEndpoint = 'http://localhost:8983/solr/Lucene/suggest?q=' + termToComplete;
     axios.get(solrSuggestEndpoint).then(function (response) {
         var suggestions = response.data.suggest.suggest[currentInput].suggestions;
         suggestions.sort(function (a, b) {
             return b.weight - a.weight;
         });
-        var terms = suggestions.map(function (item) { return item.term });
+        var terms = suggestions.map(function (item) {
+            termsArray[termsArray.length - 1] = item.term;
+            return termsArray.join(' ');
+        });
         res.send(terms);
     }).catch(function (error) {
         console.log(error.data);

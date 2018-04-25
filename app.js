@@ -1,4 +1,4 @@
-global.inDevelopment = true;
+global.inDevelopment = false;
 console.log("Start running in", inDevelopment ? 'Development' : 'Production', 'mode.');
 
 global.solrDomainName = "127.0.0.1";

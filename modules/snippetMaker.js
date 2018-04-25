@@ -1,14 +1,15 @@
-var extractor = require('unfluff');
+var htmlToText = require('html-to-text');
 var fs = require('fs');
 
 module.exports = {
     getSnippet: function (pathToFile, terms) {
         var html = this.getHtmlText(pathToFile);
-        var parsedHtml = extractor(html);
-        var content = parsedHtml.text;
-        // var rawSnippet = this.findSentence(terms, content);
+        var content = htmlToText.fromString(html, {
+            ignoreHref: true,
+            ignoreImage: true
+        });
         var rawSnippet = this.findSentence(terms, content);
-        var formattedSnippet = this.formatSnippet(rawSnippet);
+        var formattedSnippet = this.formatSnippet(rawSnippet, terms);
         var highlightedSnippet = this.highlight(formattedSnippet, terms);
         return highlightedSnippet;
     },
@@ -42,7 +43,7 @@ module.exports = {
     findPerfectMatch: function (terms, sentences) {
         for (var i in sentences) {
             var sentence = sentences[i];
-            var index = sentence.toLowerCase().indexOf(terms);
+            var index = sentence.toLowerCase().indexOf(terms.toLowerCase());
             if (index !== -1)
                 return sentence;
         }
@@ -52,7 +53,7 @@ module.exports = {
     findFittedMatch: function (termsArray, sentences) {
         for (var i in sentences) {
             var sentence = sentences[i];
-            if (this.containsAll(sentence.toLowerCase(), termsArray))
+            if (this.containsAll(sentence, termsArray))
                 return sentence;
         }
         return '';
@@ -60,8 +61,8 @@ module.exports = {
 
     containsAll: function (sentence, termsArray) {
         for (var i in termsArray) {
-            var term = termsArray[i];
-            if (sentence.indexOf(term) === -1)
+            var term = termsArray[i].toLowerCase();
+            if (sentence.toLowerCase().indexOf(term) === -1)
                 return false;
         }
         return true;
@@ -70,7 +71,8 @@ module.exports = {
     findLeastMatch: function (termsArray, sentences) {
         for (var i in sentences) {
             var sentence = sentences[i];
-            if (this.containsOne(sentence.toLowerCase(), termsArray))
+            console.log("least:", sentence);
+            if (this.containsOne(sentence, termsArray))
                 return sentence;
         }
         return '';
@@ -78,23 +80,44 @@ module.exports = {
 
     containsOne: function (sentence, termsArray) {
         for (var i in termsArray) {
-            var term = termsArray[i];
-            if (sentence.indexOf(term) !== -1)
+            var term = termsArray[i].toLowerCase();
+            if (sentence.toLowerCase().indexOf(term) !== -1)
                 return true;
         }
         return false;
     },
 
-    formatSnippet: function (rawSnippet) {
+    formatSnippet: function (rawSnippet, terms) {
+        if (rawSnippet.length > 160) {
+            var firstIndex = this.getFirstIndex(rawSnippet, terms);
+            console.log('firstIndex', firstIndex)
+            rawSnippet = rawSnippet.substring(firstIndex, firstIndex + 160);
+        }
         var formattedSnippet = rawSnippet ? '...' + rawSnippet + '...' : '';
         return formattedSnippet;
     },
 
-    highlight: function (formattedSnippet, terms) {
+    getFirstIndex: function (rawSnippet, terms) {
+        if (!rawSnippet) return 0;
         var termsArray = terms.split(' ');
+        var firstIndex = Number.MAX_VALUE;
         for (var i in termsArray) {
             var term = termsArray[i];
-            var highlightedSnippet = formattedSnippet.replace(new RegExp(term, "gi"), '<b>' + term + '</b>');
+            var index = rawSnippet.toLowerCase().indexOf(term.toLowerCase());
+            console.log('new index: ', index, 'term:', term.toLowerCase())
+            if (index !== -1) {
+                firstIndex = Math.min(firstIndex, index);
+            }
+        }
+        return firstIndex;
+    },
+
+    highlight: function (formattedSnippet, terms) {
+        var termsArray = terms.split(' ');
+        var highlightedSnippet = formattedSnippet;
+        for (var i in termsArray) {
+            var term = termsArray[i];
+            var highlightedSnippet = highlightedSnippet.replace(new RegExp(term, "gi"), '<b>' + term + '</b>');
         }
         return highlightedSnippet;
     }
