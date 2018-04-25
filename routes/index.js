@@ -9,7 +9,7 @@ var spellCheckLoader = require('../modules/spellCheckLoader');
 var snippetMaker = require('../modules/snippetMaker');
 
 var loadSpellCheckerPromise = spellCheckLoader();
-const pathToHtmls = rootPath + '/FOX_NEWS/HTML_files/';
+const pathToHtmls = rootPath + '/FOX_NEWS/HTML_files';
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -61,19 +61,19 @@ router.get('/lucene', function (req, res) {
     });
     loadSpellCheckerPromise.then(function (spellChecker) {
         nameUrlMapPromise.then(function (nameUrlMap) {
-            renderResultCorrectionSnippet(spellChecker, nameUrlMap);
+            renderResultAndCorrection(spellChecker, nameUrlMap);
         });
     });
 
 
-    function renderResultCorrectionSnippet(spellChecker, nameUrlMap) {
+    function renderResultAndCorrection(spellChecker, nameUrlMap) {
 
         var correctedTerms = getCorrectedTerms(spellChecker);
-        console.log('terms:', correctedTerms, inputTerms);
+        console.log('corrected terms:', correctedTerms, '| original terms:', inputTerms);
         if (correctedTerms.toLowerCase() === inputTerms.toLowerCase()) {
             renderResultPage(inputTerms, nameUrlMap, res, solrClient);
         } else {
-            console.log("passed:", correctedTerms);
+            console.log("passed spell correction as:", correctedTerms);
             renderResultPage(inputTerms, nameUrlMap, res, solrClient, correctedTerms);
         }
     }
@@ -107,7 +107,7 @@ function renderResultPage(inputTerms, nameUrlMap, res, solrClient, correctedTerm
         } else {
             var docs = obj["response"]["docs"];
             if (docs.length !== 0) {
-                var itemsToShow = getItemsToShow(docs, nameUrlMap);
+                var itemsToShow = getItemsToShow(docs, nameUrlMap, inputTerms);
                 // Export result to .txt file (to populate into table)
                 // writeToTxt(itemsToShow);
                 res.render('result', { items: itemsToShow, correctedTerms: correctedTerms });
@@ -122,14 +122,15 @@ function createLuceneQuery(inputTerms, solrClient) {
     return solrClient.createQuery().q(inputTerms).start(0).rows(10);
 }
 
-function getItemsToShow(docs, nameUrlMap) {
+function getItemsToShow(docs, nameUrlMap, inputTerms) {
     var items = [];
     docs.forEach(function (item, index) {
         var id = item['id'];
         var shortId = id.substring(id.lastIndexOf('/') + 1);
         var url = nameUrlMap[shortId];
-        var description = item['description'];
-        // var description = generateSnippet(rootPath + '/FOX_NEWS/HTML_files/0a0b46d3eaffb2cbc7d4c79de38e9b87.html');
+        var filePath = pathToHtmls + '/' + shortId;
+        // var description = item['description'];
+        var description = snippetMaker.getSnippet(filePath, inputTerms);
         var title = item['title'];
         var newItem = {
             id: id,
