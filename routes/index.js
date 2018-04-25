@@ -1,13 +1,15 @@
 var express = require('express');
 var router = express.Router();
 var solr = require('solr-client');
-var parseCsvPromise = require('../modules/parseCsv');
-var spellCheckLoader = require('../modules/spellCheckLoader');
 var fs = require('fs');
 var path = require('path');
 var axios = require('axios');
+var parseCsvPromise = require('../modules/parseCsv');
+var spellCheckLoader = require('../modules/spellCheckLoader');
+var snippetMaker = require('../modules/snippetMaker');
 
 var loadSpellCheckerPromise = spellCheckLoader();
+const pathToHtmls = rootPath + '/FOX_NEWS/HTML_files/';
 
 /* GET home page. */
 router.get('/', function (req, res) {
@@ -59,20 +61,20 @@ router.get('/lucene', function (req, res) {
     });
     loadSpellCheckerPromise.then(function (spellChecker) {
         nameUrlMapPromise.then(function (nameUrlMap) {
-            renderResultAndCorrection(spellChecker, nameUrlMap);
+            renderResultCorrectionSnippet(spellChecker, nameUrlMap);
         });
     });
 
 
-    function renderResultAndCorrection(spellChecker, nameUrlMap) {
-        var luceneQuery = createLuceneQuery();
+    function renderResultCorrectionSnippet(spellChecker, nameUrlMap) {
+
         var correctedTerms = getCorrectedTerms(spellChecker);
         console.log('terms:', correctedTerms, inputTerms);
         if (correctedTerms.toLowerCase() === inputTerms.toLowerCase()) {
-            renderResultPage(luceneQuery, nameUrlMap, res, solrClient);
+            renderResultPage(inputTerms, nameUrlMap, res, solrClient);
         } else {
             console.log("passed:", correctedTerms);
-            renderResultPage(luceneQuery, nameUrlMap, res, solrClient, correctedTerms);
+            renderResultPage(inputTerms, nameUrlMap, res, solrClient, correctedTerms);
         }
     }
 
@@ -81,7 +83,11 @@ router.get('/lucene', function (req, res) {
         var isCorrected = false;
         var correctedTermArray = [];
         inputTermArray.forEach(function (term) {
-            var suggestedTerm = spellChecker.suggest(term)[0]['word'];
+            var suggestedTerm = spellChecker.suggest(term)[0];
+            if (!suggestedTerm) {
+                return correctedTermArray.push(term);
+            }
+            suggestedTerm = suggestedTerm['word'];
             if (suggestedTerm !== term) {
                 isCorrected = true;
             }
@@ -90,13 +96,10 @@ router.get('/lucene', function (req, res) {
         return correctedTermArray.join(' ');
     }
 
-    function createLuceneQuery() {
-        return solrClient.createQuery().q(inputTerms).start(0).rows(10);
-    }
-
 });
 
-function renderResultPage(query, nameUrlMap, res, solrClient, correctedTerms) {
+function renderResultPage(inputTerms, nameUrlMap, res, solrClient, correctedTerms) {
+    var query = createLuceneQuery(inputTerms, solrClient);
     solrClient.search(query, function (err, obj) {
         if (err) {
             console.log(err);
@@ -115,13 +118,18 @@ function renderResultPage(query, nameUrlMap, res, solrClient, correctedTerms) {
     });
 }
 
+function createLuceneQuery(inputTerms, solrClient) {
+    return solrClient.createQuery().q(inputTerms).start(0).rows(10);
+}
+
 function getItemsToShow(docs, nameUrlMap) {
     var items = [];
-    docs.forEach(function (item) {
+    docs.forEach(function (item, index) {
         var id = item['id'];
         var shortId = id.substring(id.lastIndexOf('/') + 1);
         var url = nameUrlMap[shortId];
         var description = item['description'];
+        // var description = generateSnippet(rootPath + '/FOX_NEWS/HTML_files/0a0b46d3eaffb2cbc7d4c79de38e9b87.html');
         var title = item['title'];
         var newItem = {
             id: id,
